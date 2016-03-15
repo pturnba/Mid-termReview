@@ -14,7 +14,8 @@ public class PeopleDisplay {
 		
 		String winner = null;
 		int highScore = 0;
-		double total = 0, readCount = 0.0;
+		double total = 0;
+		double count = 0.0;
 		
 		while (input.hasNextLine()) {
 			StringTokenizer st = new StringTokenizer(input.nextLine(), ";");
@@ -27,10 +28,10 @@ public class PeopleDisplay {
 				winner = name;
 			}
 			total += val3;
-			readCount++;
+			count++;
 		}
 		System.out.printf("The person with the highest score is: %s with %d%n", winner, highScore);
-		System.out.printf("The avarage is: %.2f%n", (total / readCount));
+		System.out.printf("The avarage is: %.2f%n", (total / count));
 		input.close();
 		
 	}
