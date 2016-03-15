@@ -1,5 +1,6 @@
 package classLab4;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ValidationLoop {
@@ -14,8 +15,9 @@ public class ValidationLoop {
 		while(incorrectFormat){
 			
 			if(!kb.hasNextInt()){
-					System.err.println("Year formatted incorrectly! Enter as Numeric value.");
-					
+					System.err.println("Year formatted incorrectly! Re-enter as Numeric value.");
+					kb.next();
+					continue;
 			}
 			else if(kb.hasNextInt()){
 					incorrectFormat = false;
