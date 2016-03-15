@@ -13,7 +13,7 @@ public class PeopleDisplay {
 		Scanner input = new Scanner(file);
 		
 		String winner = null;
-		int highest = 0;
+		int highScore = 0;
 		double total = 0, readCount = 0.0;
 		
 		while (input.hasNextLine()) {
@@ -22,14 +22,14 @@ public class PeopleDisplay {
 			int val2 = Integer.parseInt(st.nextToken());
 			double val3 = Double.parseDouble(st.nextToken());
 
-			if (val2 > highest) {
-				highest = val2;
+			if (val2 > highScore) {
+				highScore = val2;
 				winner = name;
 			}
 			total += val3;
 			readCount++;
 		}
-		System.out.printf("And the Winner is: %s with %d%n", winner, highest);
+		System.out.printf("The person with the highest score is: %s with %d%n", winner, highScore);
 		System.out.printf("The avarage is: %.2f%n", (total / readCount));
 		input.close();
 		
