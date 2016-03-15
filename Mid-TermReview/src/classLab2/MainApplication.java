@@ -1,4 +1,4 @@
-package edu.cis232;
+package classLab2;
 
 import java.util.Arrays;
 import java.util.Random;
