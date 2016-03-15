@@ -31,7 +31,7 @@ public class FileEncryption {
 		dos.writeInt(key);
 		dos.writeUTF(sb.toString());
 		dos.close();
-		
+		System.out.println("File 'secret.msg' created and Encrypted.");
 	}
 
 }

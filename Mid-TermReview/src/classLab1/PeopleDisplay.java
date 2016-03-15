@@ -11,9 +11,11 @@ public class PeopleDisplay {
 		// TODO Auto-generated method stub
 		File file = new File("people.ssv");
 		Scanner input = new Scanner(file);
+		
 		String winner = null;
 		int highest = 0;
 		double total = 0, readCount = 0.0;
+		
 		while (input.hasNextLine()) {
 			StringTokenizer st = new StringTokenizer(input.nextLine(), ";");
 			String name = st.nextToken();
